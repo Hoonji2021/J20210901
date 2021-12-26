@@ -81,7 +81,7 @@ public class PicInfoAction implements CommandProcess {
 			System.out.println(e.getMessage());
 		}
 
-		return "picInfo2.jsp";
+		return "picInfo.jsp";
 	}
 
 }
