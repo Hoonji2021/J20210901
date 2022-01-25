@@ -91,16 +91,16 @@ function chk2() {
 }
 
 $(function() {
-	$('#remclick').click(function() {
+	$('#remclick').click(function() { //by 지훈, 좋아요가 1일때
 		alert("좋아요 취소!");
 		location.href="like.do?id=${id}&pid=${pid}&acttype=${acttype}";
 		
 	});
-	$('#addclick').click(function() {
+	$('#addclick').click(function() { //by 지훈, 좋아요가 0일때
 		alert("좋아요 클릭!")
 		location.href="like.do?id=${id}&pid=${pid}&acttype=${acttype}";
 	});
-	$('#noclick').click(function() {
+	$('#noclick').click(function() { //by 지훈, 비회원일때
 		var answer;
 		answer = confirm("회원만 가능한 기능입니다. 로그인 하시겠습니까?");
 		if(answer == true){

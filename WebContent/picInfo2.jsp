@@ -98,17 +98,21 @@ function remlike(){
 		url: "<%=context%>/like.do", 
 		type: "POST", 
 		dataType: "json", 
-		data: $('#remLike').serialize(), //by 지훈, 아이디가 like_form인 곳의 모든 정보를 가져와 파라미터 전송 형태(표준 쿼리형태)로 만들어줌 
-		success: function(data){ //by 지훈, ajax통신 성공시 넘어오는 데이터 통째 이름 =data 
+		//by 지훈, 아이디가 like_form인 곳의 모든 정보를 가져와 파라미터 전송 형태(표준 쿼리형태)로 만들어줌 
+		data: $('#remLike').serialize(),
+		
+		//by 지훈, ajax통신 성공시 넘어오는 데이터 =data 
+		success: function(data){ 
 			console.log("acttype ->"+data.acttype);
 			if(data.acttype == 1){
 				$('#removeHeart').attr("src", "img/heart1.png");
-				$("#like_result").html(data.likeCnt); //by 지훈,id값이 like_result인 html을 찾아서 data.like값으로 바꿔준다.
+				//by 지훈,id값이 like_result인 html을 찾아서 data.like값으로 바꿔준다.
+				$("#like_result").html(data.likeCnt); 
 			}else if(data.acttype == 0){
 				$('#removeHeart').attr("src", "img/heart0.png");
 				$("#like_result").html(data.likeCnt); 
 			}
-			//alert("'좋아요'가 취소되었습니다!") ; // data중 put한 것의 이름 like
+			
 			 
 		}, 
 		error: function (request, status, error){ 
