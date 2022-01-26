@@ -237,11 +237,13 @@ function remlike(){
                        
                        <!-------------------- 좋아요 -------------------->
                        		<c:if test="${id!=null }">
-                       				
+                       				<!-- 회원일 때 -->
                        				<button style="border: 0;" type="button" onclick="return remlike()">
+										<!-- 좋아요를 누른 상태일때 -->
 										<c:if test="${acttype == 1 }">
 											<img id="removeHeart" src="img/heart1.png" width="30px" height="30px">
 										</c:if>
+										<!-- 좋아요를 안누른 상태일때 -->
 										<c:if test="${acttype == 0 }">
 											<img id="removeHeart" src="img/heart0.png" width="30px" height="30px">
 										</c:if>
@@ -256,6 +258,7 @@ function remlike(){
 									</form>	
 				
 							</c:if>
+							<!-- 비회원이 좋아요 눌렀을 때 -->
 							<c:if test="${id==null }">
 								<a id="noclick" onclick="noclick()">
 									<button style="border: 0;">
@@ -280,8 +283,8 @@ function remlike(){
                     <p class="mb-4">
                       <h4 class="tm-text-gray-dark mb-3" style="display: inline-block;"> 날짜 : </h4> <span class="tm-text-gray-dark" style="font-size: 20px;">&nbsp;&nbsp;${pic.p_date }</span>
                     </p>
+                    <!--------------- 설명 ---------------->
                     <div class="mb-4">
-              <!--------------- 설명 ---------------->
                         <h4 class="tm-text-gray-dark mb-3">설명 : </h4>
                         <p>${pic.pcomment }</p>
                     </div>

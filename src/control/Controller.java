@@ -138,11 +138,12 @@ public class Controller extends HttpServlet {
 			request.setCharacterEncoding("utf-8"); 
 		    response.setCharacterEncoding("utf-8");
 			PrintWriter pw = response.getWriter();
+			//pid = 사진번호 id = 회원 아이디
 			int pid = Integer.parseInt(request.getParameter("pid"));
 			String id = request.getParameter("id");
 			int acttype = 0;
 			try {
-				acttype = adao.findlike(pid, id);
+				acttype = adao.findlike(pid, id); //acttype 1이면 좋아요 2가 사진업로드
 				System.out.println("zzz acttype ->"+acttype);
 			} catch (SQLException e1) {
 				// TODO Auto-generated catch block
@@ -160,9 +161,9 @@ public class Controller extends HttpServlet {
 		    if(acttype == 0) {
 		    	try {
 					adlike = pdao.addlike(pid); // pictures plike+1
-					likeCnt = pdao.findLikeCnt(pid);
-					adao.inserttype(pid,id); 
-					realActType = adao.findlike(pid, id);
+					likeCnt = pdao.findLikeCnt(pid); // 좋아요 수 가져오기
+					adao.inserttype(pid,id); //acttype 입력
+					realActType = adao.findlike(pid, id); // 좋아요타입이 1이냐 0이냐 확인하기위함
 					//type 찾기 1or0
 					
 					System.out.println("realActType 1이어야함 ->"+realActType);

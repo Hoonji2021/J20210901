@@ -10,12 +10,14 @@
 
 > **개발인원** : 5명
 
+
+
+# 개발환경
+ <img src="https://user-images.githubusercontent.com/91710897/150970465-4d40e2f7-9739-4f19-816a-6220fef36393.png" width="400">
+
 > **사용기술** : 
  - 프론트엔드 : html, css, javascript, jquery,
  - 백엔드 : java, jsp/servlet, oracle sql, ajax
-
->	**개발환경** : 
- <img src="https://user-images.githubusercontent.com/91710897/150970465-4d40e2f7-9739-4f19-816a-6220fef36393.png" width="400">
 
 
 # 기획의도
@@ -56,14 +58,14 @@
 
 
 # 노력과정
-1. 기능 구현방식 이해
-    - 이미지 업로드 시 필요한 multipartrequest 인터페이스에 대해 공부
-    - 태그 등록 시 태그를 나누기 위한 Stringtokenaizer 공부
-    - 다양한 기능구현을 위해 JS 공부
 
-2. 코드 리팩토링
-    - 좋아요 기능 비동기 방식으로 변경
-    - 반복함수 제거 및 코드 간결화
+
+|노력1. 기능 구현방식 이해|노력2. 프로젝트 관리|노력3. 코드 리팩토링|
+|--|--|--|
+|<img src="https://user-images.githubusercontent.com/91710897/151131772-5d955ef4-e87e-4ce4-b0ec-8f35b49e477d.png" width="400"><br>- 다양한 기능구현을 위해 JS 공부<br>- 이미지 업로드 기능에 필요한 인터페이스 지식공부<br>|<img src="https://user-images.githubusercontent.com/91710897/151132115-cb91eed5-575b-412b-9e6f-25283d0472ee.png" width="400"><br>- 기능구현과 함께 기능관리대장 작성<br>- JSP/servlet 프로젝트 이해 및 환경설정<br>- 팀원들과 코드리뷰<br>|<img src="https://user-images.githubusercontent.com/91710897/151134279-e675370d-9e67-416f-9912-f3fecd5cd9d7.png" width="400"><br>- 좋아요 기능 비동기 방식으로 변경<br>- 반복함수 제거 및 코드 간결화<br>- 연관이미지 추가|
+
+
+
     
 
 

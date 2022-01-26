@@ -382,7 +382,7 @@ label {
 			<!-- </div> -->
 			
 			<div class="Tag" id="box1">
-				<input type="text" name="tag" class="Tag_tag" placeholder="태그를 입력하세요.(ex:#강아지#반려견)" required="required"onkeyup="noSpaceForm(this);" onchange="noSpaceForm(this);">
+				<input type="text" name="tag" class="Tag_tag" placeholder="태그를 입력하세요.(ex:#강아지#반려견)" required="required" onkeyup="noSpaceForm(this);" onchange="noSpaceForm(this);">
 			</div>
 	
 			<div class="Remark"id="box1">

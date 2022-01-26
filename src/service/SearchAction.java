@@ -20,9 +20,11 @@ public class SearchAction implements CommandProcess {
 	      String searchPageNum = request.getParameter("searchPageNum");
 	      if (searchPageNum == null || searchPageNum.equals(""))
 	         searchPageNum = "1";
-
-	      String search = request.getParameter("search");
-	      search = search.replace(" ","");
+	      //by 지훈, picInfo.jsp에서 날아온 해당 태그
+	      String search = request.getParameter("search"); 
+	      //by 지훈, 공백 없애기
+	      search = search.replace(" ",""); 
+	      
 	      List<Pic> list = pd.search(search, searchPageNum,0);  
 	      int totPage = pd.getTotalPage(search); 
 
